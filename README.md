@@ -4,7 +4,7 @@
 
 WorldTracker is a real-time, autonomous crisis telemetry dashboard. It visualizes live seismic activity and simulated Open-Source Intelligence (OSINT) events on a highly interactive, procedural 3D WebGL globe. 
 
-![WorldTracker](https://img.shields.io/badge/Status-Active-success) ![License](https://img.shields.io/badge/License-MIT-blue)
+![WorldTracker](https://img.shields.io/badge/Status-Active-success)
 
 ## 🌟 Features
 
