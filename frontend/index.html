@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="WorldTracker-SAALiM — Real-time autonomous crisis telemetry node. Live seismic and global anomaly events rendered on a 3D procedural WebGL globe with AI-powered threat summaries." />
+  <meta name="theme-color" content="#0a0f1e" />
+  <title>WorldTracker — Event Horizon Telemetry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="app">
+    <!-- Globe Container -->
+    <div id="globe-container"></div>
+
+    <!-- HUD Overlay -->
+    <header id="hud-header">
+      <div id="hud-brand">
+        <span class="brand-icon">⬡</span>
+        <span class="brand-name">WorldTracker</span>
+        <span class="brand-sub">GLOBAL INTELLIGENCE NODE</span>
+      </div>
+      <div id="hud-status">
+        <div id="status-indicator">
+          <span id="status-dot"></span>
+          <span id="status-text">CONNECTING</span>
+        </div>
+        <div id="event-counter">
+          <span class="counter-label">EVENTS</span>
+          <span id="counter-value">—</span>
+        </div>
+        <div id="last-updated">
+          <span class="counter-label">LAST SYNC</span>
+          <span id="updated-value">—</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Left Panel: Filters -->
+    <aside id="left-panel">
+      <div class="panel-section">
+        <div class="panel-title">TIME HORIZON</div>
+        <div class="time-filters">
+          <button class="time-btn" data-hours="1">1H</button>
+          <button class="time-btn" data-hours="6">6H</button>
+          <button class="time-btn" data-hours="24">24H</button>
+          <button class="time-btn" data-hours="168">7D</button>
+          <button class="time-btn active" data-hours="0">ALL</button>
+        </div>
+      </div>
+
+      <div class="panel-section" style="flex-grow: 1; display: flex; flex-direction: column;">
+        <div class="panel-title">INTELLIGENCE LAYERS</div>
+        <div id="layer-toggles" class="layer-list">
+          <!-- Populated by main.ts -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Panel: Live Feed -->
+    <aside id="right-panel">
+      <div class="panel-header">
+        <div class="panel-title">LIVE FEED</div>
+        <div class="feed-badge"><span id="feed-count">0</span> EVENTS</div>
+      </div>
+      <div id="feed-list" class="feed-scrollable">
+        <!-- Populated by feed.ts -->
+      </div>
+    </aside>
+
+    <!-- Tooltip -->
+    <div id="event-tooltip" class="hidden">
+      <div id="tooltip-category"></div>
+      <div id="tooltip-title"></div>
+      <div id="tooltip-magnitude"></div>
+      <div id="tooltip-ai"></div>
+      <div id="tooltip-time"></div>
+    </div>
+
+    <!-- Reconnect Banner -->
+    <div id="reconnect-banner" class="hidden">⚠ CONNECTION LOST — ATTEMPTING RECONNECT...</div>
+
+    <!-- Scan line overlay -->
+    <div id="scanline-overlay"></div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

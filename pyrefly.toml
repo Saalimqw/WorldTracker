@@ -1,0 +1,10 @@
+# Pyrefly configuration - exclude venv and third-party packages from type checking
+[python]
+
+# Exclude virtual environment and generated directories
+exclude = [
+  "venv/**",
+  ".venv/**",
+  "**/__pycache__/**",
+  "**/node_modules/**"
+]

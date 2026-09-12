@@ -1,0 +1,15 @@
+{
+  "pythonPath": "${workspaceFolder}/venv/Scripts/python.exe",
+  "venvPath": "${workspaceFolder}",
+  "venv": "venv",
+  "typeCheckingMode": "basic",
+  "exclude": [
+    "**/venv/**",
+    "**/.venv/**",
+    "**/node_modules/**",
+    "**/__pycache__/**"
+  ],
+  "ignore": [
+    "**/venv/**"
+  ]
+}
